@@ -30,7 +30,7 @@ module.exports = function(mst) {
             // if($('.table-taxinfo > tbody tr:contains("Ngày hoạt động")').text().trim().split("Ngày hoạt động")[1])infoDoanhNghiep.ngayHoatDong = $('.table-taxinfo > tbody tr:contains("Ngày hoạt động")').text().trim().split("Ngày hoạt động")[1].trim();
             // if($('.table-taxinfo > tbody tr:contains("Quản lý bởi")').text().trim().split("Quản lý bởi"))infoDoanhNghiep.quanLyBoi  = $('.table-taxinfo > tbody tr:contains("Quản lý bởi")').text().trim().split("Quản lý bởi")[1].trim();
             // if($('.table-taxinfo > tbody tr td[colspan=2]'))infoDoanhNghiep.lastUpdate = $('.table-taxinfo > tbody tr td[colspan=2]').text().trim();
-
+            if(mst.trim() != infoDoanhNghiep.maSoThue.trim()) reject("not found");
 
             resolve(infoDoanhNghiep);
           }else{
